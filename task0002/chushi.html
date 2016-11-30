@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .img-box{
+            height: 100%;
+            width:100%;
+            margin: 0;
+            position: absolute;
+        }
+        .img-box img{
+            position: relative;
+            height: 100%;
+            width:100%;
+            top:0;
+            left:0;
+        }
+        .btn-box{
+            width: 200px;
+            height:40px;
+            top:30%;
+            left:40%;
+            margin:30px auto;
+            position: absolute;
+            /*关于位置的都是重点*/
+
+        }
+        .btn-box button{
+            width: 200px;
+            height: 40px;
+            border: 1px solid #000000;
+            /*按钮的边界线条颜色*/
+            border-radius: 3px;
+            /*按钮的圆角设置*/
+            font-size: 28px;
+            margin:30px 115px;
+            color: #000;
+            outline:none;
+        }
+        .btn-box button:hover{
+            background-color: #ff7f81;
+            /*在鼠标移动到button上的时候进行颜色的变换*/
+            color: yellow;
+            /*鼠标移到上面的时候字体颜色会发生改变，变成黄色*/
+        }
+    </style>
+</head>
+<body>
+<div class="img-box">
+    <img id="img" src="picture/bw1.png">
+</div>
+<div class="btn-box">
+    <button id="bw" style="background: url('picture/gray.png')">巴卫</button>
+    <button id="lbx" style="background: url('picture/blue.png')">蜡笔小新</button>
+</div>
+
+<script>
+    var btn1=document.getElementById("bw");
+    var btn2=document.getElementById("lbx");
+    var img=document.getElementById("img");
+
+    btn1.onclick=function(){
+        img.setAttribute("src","picture/bw1.png");
+    }
+    btn2.onclick= function(){
+        img.setAttribute("src","picture/xx1.png");
+    }
+</script>
+</body>
+</html>
